@@ -6,9 +6,8 @@ import random
 class Driver:
     def __init__(self, master):
         self.master = master
-        self.l = tk.Label(self.master, text="Are you sure you want to delete?").pack()
-        self.b = tk.Button(self.master, text="Delete", command=self.recursive_delete)
-        self.b.pack()
+        self.label = tk.Label(self.master, text="Are you sure you want to delete?").pack()
+        self.button = tk.Button(self.master, text="Delete", command=self.recursive_delete).pack()
         self.default_font = tkFont.nametofont("TkDefaultFont")
         self.default_font.configure(size=20)
 
